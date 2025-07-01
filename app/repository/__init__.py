@@ -1,1 +1,1 @@
-from .vectorStoreDb import fetch_documents
+from .chat_repository import ChatRepository

@@ -1,1 +1,1 @@
-from .rag import query_repository
+from .chat_service import ChatService

@@ -3,7 +3,7 @@ from typing import Dict
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import chat
+from app.routers.chat_router import router as chat_router
 from app.utils.util import authenticate
 
 
@@ -19,7 +19,7 @@ app.add_middleware(
 )
 
 # Include routers
-app.include_router(chat.router, prefix="/chat", tags=["chat"])
+app.include_router(chat_router, prefix="/chat", tags=["chat"])
 
 # Login endpoint
 @app.post("/login")
